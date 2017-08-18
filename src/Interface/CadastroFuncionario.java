@@ -267,10 +267,16 @@ public class CadastroFuncionario extends javax.swing.JFrame {
 
     private void rbtnFemininoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnFemininoActionPerformed
         // TODO add your handling code here:
+        if (rbtnFeminino.isSelected()== true) {
+                rbtnMasculino.setSelected(false);
+            }
     }//GEN-LAST:event_rbtnFemininoActionPerformed
 
     private void rbtnMasculinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnMasculinoActionPerformed
         // TODO add your handling code here:
+        if (rbtnMasculino.isSelected()== true) {
+                rbtnFeminino.setSelected(false);
+            }
     }//GEN-LAST:event_rbtnMasculinoActionPerformed
 
     /**

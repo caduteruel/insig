@@ -27,12 +27,12 @@ public class NovoLancamento extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         btnHelp = new javax.swing.JButton();
         lblInSIG = new javax.swing.JLabel();
         lblAgendamento = new javax.swing.JLabel();
         btnVoltar = new javax.swing.JButton();
         lblNome = new javax.swing.JLabel();
-        txtNome = new javax.swing.JTextField();
         lblNome1 = new javax.swing.JLabel();
         txtNome1 = new javax.swing.JTextField();
         lblNome2 = new javax.swing.JLabel();
@@ -40,6 +40,7 @@ public class NovoLancamento extends javax.swing.JFrame {
         rbtnSaida = new javax.swing.JRadioButton();
         rbtnEntrada = new javax.swing.JRadioButton();
         btnRegistrar = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -75,6 +76,11 @@ public class NovoLancamento extends javax.swing.JFrame {
         lblNome2.setText("Valor");
 
         rbtnSaida.setText("Saida");
+        rbtnSaida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbtnSaidaActionPerformed(evt);
+            }
+        });
 
         rbtnEntrada.setText("Entrada");
         rbtnEntrada.addActionListener(new java.awt.event.ActionListener() {
@@ -89,6 +95,8 @@ public class NovoLancamento extends javax.swing.JFrame {
                 btnRegistrarActionPerformed(evt);
             }
         });
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Dinheiro", "Cartão de Crédito", "Cartão de Débito", "Cheque" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -109,9 +117,11 @@ public class NovoLancamento extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtNome2, javax.swing.GroupLayout.DEFAULT_SIZE, 225, Short.MAX_VALUE)
-                            .addComponent(txtNome1)
-                            .addComponent(txtNome, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 225, Short.MAX_VALUE))
-                        .addGap(48, 48, 48))))
+                            .addComponent(txtNome1))
+                        .addGap(48, 48, 48))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
                 .addGap(117, 117, 117)
                 .addComponent(btnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -143,7 +153,7 @@ public class NovoLancamento extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblNome1)
-                    .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblNome2)
@@ -192,12 +202,22 @@ public class NovoLancamento extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNome1ActionPerformed
 
     private void rbtnEntradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnEntradaActionPerformed
-        // TODO add your handling code here:
+            // TODO add your handling code here:
+             if (rbtnEntrada.isSelected()== true) {
+                rbtnSaida.setSelected(false);
+            }
     }//GEN-LAST:event_rbtnEntradaActionPerformed
 
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRegistrarActionPerformed
+
+    private void rbtnSaidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnSaidaActionPerformed
+        // TODO add your handling code here:
+        if (rbtnSaida.isSelected()== true) {
+                rbtnEntrada.setSelected(false);
+            }
+    }//GEN-LAST:event_rbtnSaidaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -238,6 +258,8 @@ public class NovoLancamento extends javax.swing.JFrame {
     private javax.swing.JButton btnHelp;
     private javax.swing.JButton btnRegistrar;
     private javax.swing.JButton btnVoltar;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel lblAgendamento;
     private javax.swing.JLabel lblInSIG;
     private javax.swing.JLabel lblNome;
@@ -245,7 +267,6 @@ public class NovoLancamento extends javax.swing.JFrame {
     private javax.swing.JLabel lblNome2;
     private javax.swing.JRadioButton rbtnEntrada;
     private javax.swing.JRadioButton rbtnSaida;
-    private javax.swing.JTextField txtNome;
     private javax.swing.JTextField txtNome1;
     private javax.swing.JTextField txtNome2;
     // End of variables declaration//GEN-END:variables
