@@ -22,7 +22,7 @@ public class Funcionario_Bean {
     public void InserFuncionario(Funcionario f) throws SQLException{
         try (Connection conexao = (Connection) ConexaoDAO.createConnection()) {
             java.sql.Statement st = conexao.createStatement();
-            ResultSet rs = st.executeQuery("insert into funcionario (nome_func,cpf,endereco,telefone,celular,sexo,cargo) VALUES ('"+f.getNome()+ "','"+f.getCpf()+ "','"+f.getEndereço()+ "','"+f.getTelefone()+ "','"+f.getCelular()+ "','"+f.getSexo()+ "','" + f.getCargo()+"');" );
+            ResultSet rs = st.executeQuery("insert into funcionario (nome_func,cpf,data_nasc,endereco,telefone,sexo,cargo) VALUES ('"+f.getNome()+ "','"+f.getCpf()+ "','"+f.getData_nasc()+ "','"+f.getEndereco()+ "','"+f.getTelefone()+ "','"+f.getSexo()+ "','" + f.getCargo()+"');" );
         }
     }
 }

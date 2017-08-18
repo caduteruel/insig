@@ -11,14 +11,14 @@ package Classes;
  */
 public class Cliente {
     private int id;
-    private String nome,cpf,endereço,telefone,celular,sexo;
+    private String nome,cpf,data_nasc,endereço,telefone,sexo;
 
-    public Cliente(int id, String nome, String cpf, String endereço, String telefone, String celular,  String sexo) {
+    public Cliente(int id, String nome, String cpf,String data_nasc, String endereço, String telefone,  String sexo) {
         this.nome = nome;
         this.cpf = cpf;
         this.endereço = endereço;
         this.telefone = telefone;
-        this.celular = celular;
+        this.data_nasc = data_nasc;
         this.id = id;
         this.sexo = sexo;
     }
@@ -39,9 +39,6 @@ public class Cliente {
         return telefone;
     }
 
-    public String getCelular() {
-        return celular;
-    }
 
     public int getId() {
         return id;
@@ -67,9 +64,7 @@ public class Cliente {
         this.telefone = telefone;
     }
 
-    public void setCelular(String celular) {
-        this.celular = celular;
-    }
+
 
     public void setId(int id) {
         this.id = id;
@@ -77,6 +72,14 @@ public class Cliente {
 
     public void setSexo(String sexo) {
         this.sexo = sexo;
+    }
+
+    public String getData_nasc() {
+        return data_nasc;
+    }
+
+    public void setData_nasc(String data_nasc) {
+        this.data_nasc = data_nasc;
     }
     
     

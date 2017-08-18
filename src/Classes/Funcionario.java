@@ -11,16 +11,17 @@ package Classes;
  */
 public class Funcionario {
     private int id;
-    private String nome,cpf,endereço,telefone,celular,sexo,cargo;
+    private String nome,cpf,data_nasc,endereco,telefone,sexo,cargo;
 
-    public Funcionario(int id, String nome, String cpf, String endereço, String telefone, String celular, String sexo, String Cargo) {
+    public Funcionario(int id, String nome, String cpf, String data_nasc,String endereco, String telefone, String sexo, String cargo) {
         this.id = id;
         this.nome = nome;
+        this.data_nasc = data_nasc;
         this.cpf = cpf;
-        this.endereço = endereço;
+        this.endereco = endereco;
         this.telefone = telefone;
-        this.celular = celular;
         this.sexo = sexo;
+        this.cargo = cargo;
     }
 
     public int getId() {
@@ -47,12 +48,12 @@ public class Funcionario {
         this.cpf = cpf;
     }
 
-    public String getEndereço() {
-        return endereço;
+    public String getEndereco() {
+        return endereco;
     }
 
-    public void setEndereço(String endereço) {
-        this.endereço = endereço;
+    public void setEndereço(String endereco) {
+        this.endereco = endereco;
     }
 
     public String getTelefone() {
@@ -63,13 +64,6 @@ public class Funcionario {
         this.telefone = telefone;
     }
 
-    public String getCelular() {
-        return celular;
-    }
-
-    public void setCelular(String celular) {
-        this.celular = celular;
-    }
 
     public String getSexo() {
         return sexo;
@@ -85,6 +79,14 @@ public class Funcionario {
 
     public void setCargo(String cargo) {
         this.cargo = cargo;
+    }
+
+    public String getData_nasc() {
+        return data_nasc;
+    }
+
+    public void setData_nasc(String data_nasc) {
+        this.data_nasc = data_nasc;
     }
 
 

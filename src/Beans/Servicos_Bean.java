@@ -19,10 +19,10 @@ import persistence.ConexaoDAO;
 public class Servicos_Bean {
     Servicos serv;
     
-    public void InserServicos(Servicos s) throws SQLException{
+    public void InsereServicos(Servicos s) throws SQLException{
         try (Connection conexao = (Connection) ConexaoDAO.createConnection()) {
             java.sql.Statement st = conexao.createStatement();
-            ResultSet rs = st.executeQuery("nome_serv,descricao,preco) Values('"+s.getNome_serv()+ "','"+s.getDescricao()+ "','"+s.getPreco()+"');" );
+            st.executeQuery("insert into servicos (nome_serv,descricao,preco) Values('"+s.getNome_serv()+ "','"+s.getDescricao()+ "','"+s.getPreco()+"');" );
         }
     }
 }
