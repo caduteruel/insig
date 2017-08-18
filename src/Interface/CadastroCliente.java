@@ -10,7 +10,7 @@ import Classes.Cliente;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import sun.security.x509.RDN;
+//import sun.security.x509.RDN;
 
 /**
  *
@@ -79,6 +79,11 @@ public class CadastroCliente extends javax.swing.JFrame {
         });
 
         rbtnFeminino.setText("Feminino");
+        rbtnFeminino.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbtnFemininoActionPerformed(evt);
+            }
+        });
 
         txtNome.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         txtNome.addActionListener(new java.awt.event.ActionListener() {
@@ -207,7 +212,9 @@ public class CadastroCliente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void rbtnMasculinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnMasculinoActionPerformed
-        // TODO add your handling code here:
+        if(rbtnMasculino.isSelected() == true){
+            rbtnFeminino.setSelected(false);
+        }
     }//GEN-LAST:event_rbtnMasculinoActionPerformed
 
     private void txtEndActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEndActionPerformed
@@ -260,6 +267,12 @@ public class CadastroCliente extends javax.swing.JFrame {
     private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNomeActionPerformed
+
+    private void rbtnFemininoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnFemininoActionPerformed
+        if(rbtnFeminino.isSelected() == true){
+            rbtnMasculino.setSelected(false);
+        }
+    }//GEN-LAST:event_rbtnFemininoActionPerformed
 
     /**
      * @param args the command line arguments
