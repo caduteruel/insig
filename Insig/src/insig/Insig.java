@@ -5,6 +5,9 @@
  */
 package insig;
 
+import Beans.Cliente_Bean;
+import java.sql.SQLException;
+
 /**
  *
  * @author guilherme
@@ -14,9 +17,11 @@ public class Insig {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         // TODO code application logic here
         System.out.println("clonewars xuplau");
+        Cliente_Bean cb = new Cliente_Bean();
+        cb.teste();
     }
     
 }
