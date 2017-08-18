@@ -19,7 +19,6 @@ public class Insig {
      */
     public static void main(String[] args) throws SQLException {
         // TODO code application logic here
-        System.out.println("clonewars xuplau");
         Cliente_Bean cb = new Cliente_Bean();
         cb.teste();
     }

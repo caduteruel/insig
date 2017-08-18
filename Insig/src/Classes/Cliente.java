@@ -10,8 +10,8 @@ package Classes;
  * @author guilherme
  */
 public class Cliente {
-    int id;
-    String nome,cpf,endereço,telefone,celular,sexo;
+    private int id;
+    private String nome,cpf,endereço,telefone,celular,sexo;
 
     public Cliente(int id, String nome, String cpf, String endereço, String telefone, String celular,  String sexo) {
         this.nome = nome;
